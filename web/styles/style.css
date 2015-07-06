@@ -1,0 +1,67 @@
+body{
+    font-family: "Comic Sans MS", Helvetica ;
+}
+header
+{
+    width: 90%;
+    background-color: royalblue ;
+    border-radius: 5% ;
+    color: white;
+    font-size: 250% ;
+    padding: 5%;
+}
+#login-container
+{
+    border-radius: 10%;
+    font-size: 150%;
+    background-color: paleturquoise ;
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    color: royalblue;
+    padding: 2%;
+    border: 2px solid blueviolet;
+}
+input
+{
+    width: 90%;
+    padding: 2%;
+    margin: 2%;
+    border:2px dotted darkblue ;
+    font-size: 120%;
+}
+#session-container
+{
+    font-size: 120%;
+    display: inline;
+    right: 10%;
+    top: 10%;
+    color: ghostwhite;
+    position: absolute;
+}
+#container div
+{
+    border-radius: 10%;
+    font-size: 150%;
+    display: block;
+    width: 90% ;
+    margin: 2%;
+    background-color: cornflowerblue ;
+    color: mintcream;
+    padding: 1%;
+
+}
+#form-container input
+{
+    width: 50%;
+    padding: 1%;
+    font-size: 110%;
+}
+
+#report-container
+{
+    background-color: lightskyblue;
+    color: royalblue;
+    width: 90%;
+    font-size: 120%;
+}

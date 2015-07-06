@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="MySQL - @localhost" uuid="044baa68-4c86-4ceb-bdce-978223b0f514">
+    <database-info product="MySQL" version="5.6.25" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
+    <schema name="" catalog="lms"/>
+    <table name="employees" schema="" catalog="lms" type="TABLE">
+      <column name="empid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="emp_name" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="emp_usr" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="emp_pwd" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="pending_leaves" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="applied_leaves" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="cancelled_leaves" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="empid"/>
+      <exported-key name="leaves_ibfk_1" table="leaves" schema="" catalog="lms" columns="emp_id"/>
+      <exported-key name="leaves1_ibfk_1" table="leaves1" schema="" catalog="lms" columns="emp_id"/>
+    </table>
+    <table name="leaves" schema="" catalog="lms" type="TABLE">
+      <column name="entry" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="emp_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="leave_from" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="leave_to" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="leave_status" sqlType="VARCHAR" precision="2" scale="0" nullable="true" jdbcType="12"/>
+      <column name="applied_on" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <primary-key name="PRIMARY" columns="entry"/>
+      <foreign-key name="leaves_ibfk_1" columns="emp_id" ref-table="employees" ref-schema="" ref-catalog="lms" ref-columns="empid" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+    <table name="leaves1" schema="" catalog="lms" type="TABLE">
+      <column name="entry" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="emp_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="leave_from" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="leave_to" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="leave_status" sqlType="VARCHAR" precision="2" scale="0" nullable="true" jdbcType="12"/>
+      <column name="applied_on" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <primary-key name="PRIMARY" columns="entry"/>
+      <foreign-key name="leaves1_ibfk_1" columns="emp_id" ref-table="employees" ref-schema="" ref-catalog="lms" ref-columns="empid" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+  </data-source>
+</component>
