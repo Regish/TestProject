@@ -33,17 +33,18 @@
     <h2> Login </h2>
     <%String error=(String) request.getAttribute("error");
         if(error!=null){
-            %><h3 id="p" ><%=error%></h3><%
+            %><h3 id="pid" ><%=error%></h3><%
         }
 
     %>
-    <form action="login" method="post" onsubmit="return validateForm();" >
+    <form action="login" method="post" onsubmit="return validateForm()" >
         UserName<br><input type="text" name="username" id="usr">
         <br />
         Password<br><input type="password" name="password" id="pwd">
         <br />
         <input type="submit" value="Login" id="login">
     </form>
+    <h2 id="p"> </h2>
 </div>
 
 </body>
